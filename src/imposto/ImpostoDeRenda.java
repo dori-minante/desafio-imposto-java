@@ -1,7 +1,9 @@
+package imposto;
+
 import java.util.Scanner;
 
 public class ImpostoDeRenda {
-    public class static void main(String[] args) {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Renda anual com salário: R$ ");
@@ -51,17 +53,17 @@ public class ImpostoDeRenda {
         System.out.println("\nRELATÓRIO DE IMPOSTO DE RENDA\n");
         System.out.println("**************************************************\n");
         System.out.println("CONSOLIDADO DE RENDA: ");
-        System.out.println("Imposto sobre salário: R$ " + impostoSalario);
-        System.out.println("Imposto sobre serviços: R$ " + impostoServico);
-        System.out.println("Imposto sobre ganho de capital: R$ \n" + impostoGanhoCapital);
-        System.out.println("DEDUÇÕES: ");
-        System.out.println("Máximo dedutível: R$ " + maximoDedutivel);
-        System.out.println("Gastos dedutíveis: R$ \n" + gastosDedutiveis);
-        System.out.println("RESUMO: ");
-        System.out.println("Imposto bruto total: R$ " + impostoBrutoTotal);
-        System.out.println("Abatimento: " + gastosDedutiveis);
-        System.out.println("Imposto devido: R$ " + impostoDevido);
+        System.out.println("Imposto sobre salário: R$ %.2f%n" + impostoSalario);
+        System.out.println("Imposto sobre serviços: R$ %.2f%n" + impostoServico);
+        System.out.println("Imposto sobre ganho de capital: R$ %.2f%n" + impostoGanhoCapital);
+        System.out.println("\nDEDUÇÕES: ");
+        System.out.println("Máximo dedutível: R$ %.2f%n" + maximoDedutivel);
+        System.out.println("Gastos dedutíveis: R$ %.2f%n" + gastosDedutiveis);
+        System.out.println("\nRESUMO: ");
+        System.out.println("Imposto bruto total: R$ %.2f%n" + impostoBrutoTotal);
+        System.out.println("Abatimento: R$ %.2f%n" + gastosDedutiveis);
+        System.out.println("Imposto devido: R$ %.2f%n" + impostoDevido);
 
-        scanner.close();
+        sc.close();
     }
 }
